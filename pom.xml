@@ -12,6 +12,7 @@
 	<properties>
 		<platform.version>4.0.1.2
 		</platform.version>
+		<versionCode>1</versionCode>
 	</properties>
 
 	<dependencies>
@@ -44,6 +45,8 @@
 						<platform>16</platform>
 					</sdk>
 					<undeployBeforeDeploy>true</undeployBeforeDeploy>
+					<manifestVersionCode>${versionCode}</manifestVersionCode>
+					<manifestVersionName>${project.version}</manifestVersionName>
 				</configuration>
 				<extensions>true</extensions>
 			</plugin>
