@@ -3,5 +3,8 @@
 		  package="com.agiliq.android.moreappslib" android:versionCode="1"
 		  android:versionName="1.0-SNAPSHOT">
 
+	<application>
+		<activity android:name=".MoreAppsActivity" android:label="More Apps"/>
+	</application>
 </manifest>
 
