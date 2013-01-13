@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<string name="mal_lib_name">MoreAppsLib</string>
+	<string name="mal_showcased_application_name">Name of the app being showcased
+		here
+	</string>
+	<string name="mal_showcased_application_icon">Icon of the app being showcased
+		here.
+	</string>
+</resources>

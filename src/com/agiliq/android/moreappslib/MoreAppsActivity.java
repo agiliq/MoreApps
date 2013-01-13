@@ -6,6 +6,6 @@ import android.os.Bundle;
 public class MoreAppsActivity extends Activity {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_more_apps);
+        setContentView(R.layout.mal_activity_more_apps);
     }
 }
