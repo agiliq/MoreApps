@@ -6,7 +6,7 @@ import android.util.Log;
 
 public class HelloAndroidActivity extends Activity {
 
-    private static String TAG = "SamplingMoreAppsLib";
+    private static String TAG = "HelloAndroidActivity";
 
     /**
      * Called when the activity is first created.
