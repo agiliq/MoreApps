@@ -45,7 +45,7 @@ public class GetAppsDetails implements Callback<AppsResponse> {
 
         String query = "pub:Agiliq";
         retrieveTitles_Packages_AppIds(query);
-        buildCSV();
+        buildStringsResourcesXMLFile();
         storeImages();
     }
 
@@ -119,15 +119,24 @@ public class GetAppsDetails implements Callback<AppsResponse> {
         return items;
     }
 
-    private void buildCSV() {
+    private void buildStringsResourcesXMLFile() {
         FileOutputStream fos;    // Facts are saved in a CSV file.
         try {
-            fos = new FileOutputStream("Agiliq_apps.csv");
+            fos = new FileOutputStream("mal_strings_agiliq_apps.xml");
+            String line = "<?xml version=\"1.0\" encoding=\"utf-8\"?>\n" +
+                    "<resources>\n";
+            byte[] xmlLine = line.getBytes();
+            fos.write(xmlLine);
             for (int i = 0; i < entriesCount; i++) {
-                String line = appTitles.get(i) + ",," + appPackages.get(i) + "\n";
-                byte[] csvLine = line.getBytes();
-                fos.write(csvLine);
+                line = "<string name=\"mal_agiliq_apps_title_a"+i+"\">"+appTitles.get(i)+"</string>"+"\n";
+                line = line.concat("<string name=\"mal_agiliq_apps_package_a"+i+"\">"+appPackages.get(i)+"</string>"+"\n");
+                xmlLine = line.getBytes();
+                fos.write(xmlLine);
             }
+            line = "</resources>";
+            xmlLine= line.getBytes();
+            fos.write(xmlLine);
+
             fos.close();
         } catch (IOException e) {
             e.printStackTrace();
