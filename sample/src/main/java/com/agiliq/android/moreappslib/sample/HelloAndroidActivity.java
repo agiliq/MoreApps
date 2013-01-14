@@ -1,4 +1,4 @@
-package com.agiliq.android.samplingmoreappslib;
+package com.agiliq.android.moreappslib.sample;
 
 import android.app.Activity;
 import android.os.Bundle;
