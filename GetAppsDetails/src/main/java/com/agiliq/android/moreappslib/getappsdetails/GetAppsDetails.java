@@ -28,6 +28,13 @@ public class GetAppsDetails implements Callback<AppsResponse> {
     ArrayList<String> appTitles;
     ArrayList<String> appPackages;
     ArrayList<String> appIds;
+    
+	/**
+	 * Search query.
+	 * 
+	 * Same as what we enter in the search box in Google Play Store.
+	 */
+	String query = "pub:Agiliq";
 
     public GetAppsDetails() {
 
@@ -43,7 +50,6 @@ public class GetAppsDetails implements Callback<AppsResponse> {
 
         session.getContext().setAndroidId("8");
 
-        String query = "pub:Agiliq";
         retrieveTitles_Packages_AppIds(query);
         buildStringsResourcesXMLFile();
         storeImages();

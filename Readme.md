@@ -21,8 +21,9 @@ You can refer the **sample** code for a live example.
 Where does the data come from
 -----------------------------
 The data here is the list of *icons*, the *titles* and the *package names* of the apps.  
-All we do is run the **GetAppsDetails** java app and get the *icons* and a string resource *xml* file.  
-This xml file contains the titles and package names.
+All we do is update the `query` field in `GetAppsDetails` class of the **GetAppsDetails** java app and run this app to get the *icons* and a string resource *xml* file.  
+This xml file contains the titles and package names.  
+*Note: The `query` string would be the same as what you enter in the search box on Google Play Store.*
 
 #### Where is the data stored
 After you run the java app the data will be saved in the root of that java project.
