@@ -9,9 +9,29 @@ public class MoreAppsActivity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.mal_activity_more_apps);
 
-        GridItemData[] gridItems = new GridItemData[10];
-        for (int i = 0; i < gridItems.length; i++) {
-            gridItems[i] = new GridItemData(R.drawable.mal_showcased_application_icon_sample, "Sample Name");
+        String drawableNamePrefix = "mal_agiliq_app_icon";
+        String stringResourcePrefix = "mal_agiliq_apps_title_a";
+        int i;
+        for(i=0; ; i++){
+            int drawableResourceId = getResources().
+                    getIdentifier(drawableNamePrefix + i, "drawable", getPackageName());
+            int stringResourceId = getResources().
+                    getIdentifier(stringResourcePrefix + i, "string", getPackageName());
+            if(drawableResourceId == 0 || stringResourceId == 0){
+                System.out.println(i);
+                break;
+            }
+        }
+
+        GridItemData[] gridItems = new GridItemData[i];
+        for (i = 0; i < gridItems.length; i++) {
+            int drawableResourceId = getResources().
+                    getIdentifier(drawableNamePrefix + i, "drawable", getPackageName());
+            int stringResourceId = getResources().
+                    getIdentifier(stringResourcePrefix + i, "string", getPackageName());
+
+            gridItems[i] = new GridItemData(drawableResourceId,
+                    getResources().getString(stringResourceId));
         }
 
         GridItemAdapter adapter = new GridItemAdapter(this, R.layout.mal_grid_item, gridItems);
