@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+<string name="mal_agiliq_apps_title_a0">Time Zone Converter</string>
+<string name="mal_agiliq_apps_package_a0">com.agiliq.timezone.core</string>
+<string name="mal_agiliq_apps_title_a1">Pincode Finder India</string>
+<string name="mal_agiliq_apps_package_a1">com.agiliq.pincodefinderindia</string>
+<string name="mal_agiliq_apps_title_a2">Bank Locator India</string>
+<string name="mal_agiliq_apps_package_a2">com.agiliq.bankLocator</string>
+<string name="mal_agiliq_apps_title_a3">ATM Locator India</string>
+<string name="mal_agiliq_apps_package_a3">com.agiliq.atmfinder</string>
+<string name="mal_agiliq_apps_title_a4">Tax Calculator India: Pro</string>
+<string name="mal_agiliq_apps_package_a4">com.agiliq.taxcalcpro</string>
+<string name="mal_agiliq_apps_title_a5">How To Android</string>
+<string name="mal_agiliq_apps_package_a5">com.agiliq.android</string>
+<string name="mal_agiliq_apps_title_a6">Blood Sugar Tracker</string>
+<string name="mal_agiliq_apps_package_a6">com.agiliq.sugartrack</string>
+<string name="mal_agiliq_apps_title_a7">Anagram Generator</string>
+<string name="mal_agiliq_apps_package_a7">com.agiliq.anagen</string>
+<string name="mal_agiliq_apps_title_a8">Track your Medicines</string>
+<string name="mal_agiliq_apps_package_a8">com.agiliq.trackmymed</string>
+<string name="mal_agiliq_apps_title_a9">How To Ipod</string>
+<string name="mal_agiliq_apps_package_a9">com.agiliq.ipod</string>
+<string name="mal_agiliq_apps_title_a10">BloodPressureTrack</string>
+<string name="mal_agiliq_apps_package_a10">com.agiliq.bptrack</string>
+<string name="mal_agiliq_apps_title_a11">Comic Reader</string>
+<string name="mal_agiliq_apps_package_a11">com.agiliq.comicreader</string>
+<string name="mal_agiliq_apps_title_a12">Password Generator</string>
+<string name="mal_agiliq_apps_package_a12">com.passgen.passwordgenrator</string>
+<string name="mal_agiliq_apps_title_a13">Can you believe?</string>
+<string name="mal_agiliq_apps_package_a13">com.agiliq.dyk.app</string>
+</resources>
