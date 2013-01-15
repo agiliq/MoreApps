@@ -3,12 +3,13 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
 			  android:orientation="vertical"
 			  android:layout_width="fill_parent"
-			  android:layout_height="fill_parent" android:gravity="center">
+			  android:layout_height="110dp" android:gravity="center"
+			  android:layout_margin="2.5dp">
 
 	<ImageView
 			android:layout_width="match_parent"
 			android:layout_height="0dp"
-			android:id="@+id/mal_imageView" android:layout_marginBottom="2.5dp"
+			android:id="@+id/mal_imageView"
 			android:layout_weight="1" android:adjustViewBounds="true"
 			android:cropToPadding="false" android:padding="2.5dp"
 			android:src="@drawable/mal_showcased_application_icon_sample"
@@ -19,8 +20,8 @@
 			android:layout_height="wrap_content"
 			android:text="@string/mal_showcased_application_name"
 			android:id="@+id/mal_textView"
-			android:layout_marginTop="2.5dp" android:gravity="center"
-			android:padding="2.5dp" android:textStyle="bold"
+			android:gravity="center"
+			android:textStyle="bold"
 			android:typeface="monospace"/>
 
 </LinearLayout>
