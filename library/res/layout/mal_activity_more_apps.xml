@@ -10,7 +10,6 @@
 			android:layout_height="match_parent"
 			android:id="@+id/mal_gridView"
 			android:fastScrollEnabled="true"
-			android:fastScrollAlwaysVisible="true"
 			android:numColumns="auto_fit" android:drawSelectorOnTop="true"
 			android:horizontalSpacing="2.5dp" android:verticalSpacing="2.5dp"
 			/>
