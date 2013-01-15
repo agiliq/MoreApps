@@ -157,7 +157,7 @@ public class GetAppsDetails implements Callback<AppsResponse> {
                 @Override
                 public void onResult(ResponseContext context, GetImageResponse response) {
                     try {
-                        FileOutputStream fos = new FileOutputStream(countOfApps + ".png");
+                        FileOutputStream fos = new FileOutputStream("mal_agiliq_app_icon" + countOfApps + ".png");
                         fos.write(response.getImageData().toByteArray());
                         fos.close();
                     } catch (IOException ex) {
