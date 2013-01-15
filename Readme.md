@@ -10,9 +10,10 @@ Add the following code in your `AndroidManifest.xml`:
               android:label="More Apps">
     </activity>
     
-Perform an `Intent` to start the `MoreAppsActivity`
+Perform an `Intent` to start the `MoreAppsActivity`; make sure to `putExtra("package", getPackageName());`, this ensures that if the your app is in the list of apps being showcased then your app won't be shown.
 
     Intent intent = new Intent(this, MoreAppsActivity.class);
+    intent.putExtra("package", getPackageName());
     startActivity(intent);
 
 You can refer the **sample** code for a live example.

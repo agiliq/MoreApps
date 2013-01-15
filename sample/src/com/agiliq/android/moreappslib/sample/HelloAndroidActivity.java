@@ -35,6 +35,7 @@ public class HelloAndroidActivity extends Activity {
     public boolean onOptionsItemSelected(MenuItem item) {
         if(item.getItemId() == R.id.moreApps){
             Intent intent = new Intent(this, MoreAppsActivity.class);
+            intent.putExtra("package", getPackageName());
             startActivity(intent);
             return true;
         }
