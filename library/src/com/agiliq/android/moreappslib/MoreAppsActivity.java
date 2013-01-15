@@ -9,19 +9,26 @@ import android.widget.AdapterView;
 import android.widget.GridView;
 
 public class MoreAppsActivity extends Activity {
+
+    String drawableNamePrefix = "mal_agiliq_app_icon";
+    int drawableResourceId;
+    String stringResourcePrefix_Title = "mal_agiliq_apps_title_a";
+    int stringResourceId_Title;
+    String stringResourcePrefix_Package = "mal_agiliq_apps_package_a";
+    int stringResourceId_Package;
+    
+    String hostAppPackageName;
+	
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.mal_activity_more_apps);
 
-        String drawableNamePrefix = "mal_agiliq_app_icon";
-        String stringResourcePrefix = "mal_agiliq_apps_title_a";
+        hostAppPackageName = getPackageName();
+        
         int i;
         for(i=0; ; i++){
-            int drawableResourceId = getResources().
-                    getIdentifier(drawableNamePrefix + i, "drawable", getPackageName());
-            int stringResourceId = getResources().
-                    getIdentifier(stringResourcePrefix + i, "string", getPackageName());
-            if(drawableResourceId == 0 || stringResourceId == 0){
+        	initDrawableAndStringResourceIds(i);
+            if(drawableResourceId == 0 || stringResourceId_Title == 0){
                 System.out.println(i);
                 break;
             }
@@ -29,13 +36,8 @@ public class MoreAppsActivity extends Activity {
 
         GridItemData[] gridItems = new GridItemData[i];
         for (i = 0; i < gridItems.length; i++) {
-            int drawableResourceId = getResources().
-                    getIdentifier(drawableNamePrefix + i, "drawable", getPackageName());
-            int stringResourceId = getResources().
-                    getIdentifier(stringResourcePrefix + i, "string", getPackageName());
-
-            gridItems[i] = new GridItemData(drawableResourceId,
-                    getResources().getString(stringResourceId));
+        	initDrawableAndStringResourceIds(i);
+            gridItems[i] = new GridItemData(drawableResourceId, getString(stringResourceId_Title));
         }
 
         GridItemAdapter adapter = new GridItemAdapter(this, R.layout.mal_grid_item, gridItems);
@@ -46,13 +48,34 @@ public class MoreAppsActivity extends Activity {
         gridView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long l) {
-                String packageName = getString(getResources().
-                        getIdentifier("mal_agiliq_apps_package_a" + position,
-                                "string", getPackageName()));
+            	updateStringResourceId_Package(position);
+                String packageName = getString(stringResourceId_Package);
+                
                 Intent intent = new Intent(Intent.ACTION_VIEW);
                 intent.setData(Uri.parse("market://details?id=" + packageName));
                 startActivity(intent);
             }
         });
     }
+    
+    private void initDrawableAndStringResourceIds(int i){
+    	updateDrawableResourceId(i);
+        updateStringResourceId_Title(i);
+        updateStringResourceId_Package(i);
+    }
+
+	private void updateDrawableResourceId(int i) {
+		drawableResourceId = getResources().
+                getIdentifier(drawableNamePrefix + i, "drawable", hostAppPackageName);
+	}
+
+	private void updateStringResourceId_Title(int i) {
+		stringResourceId_Title = getResources().
+                getIdentifier(stringResourcePrefix_Title + i, "string", hostAppPackageName);
+	}
+
+	private void updateStringResourceId_Package(int i) {
+		stringResourceId_Package = getResources().
+                getIdentifier(stringResourcePrefix_Package + i, "string", hostAppPackageName);
+	}
 }
