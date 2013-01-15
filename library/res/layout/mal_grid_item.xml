@@ -20,8 +20,6 @@
 			android:layout_height="wrap_content"
 			android:text="@string/mal_showcased_application_name"
 			android:id="@+id/mal_textView"
-			android:gravity="center"
-			android:textStyle="bold"
-			android:typeface="monospace"/>
+			android:gravity="center"/>
 
 </LinearLayout>
