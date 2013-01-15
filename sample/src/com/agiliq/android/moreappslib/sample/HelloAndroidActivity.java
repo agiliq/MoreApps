@@ -1,8 +1,12 @@
 package com.agiliq.android.moreappslib.sample;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.Menu;
+import android.view.MenuItem;
+import com.agiliq.android.moreappslib.MoreAppsActivity;
 
 public class HelloAndroidActivity extends Activity {
 
@@ -21,5 +25,20 @@ public class HelloAndroidActivity extends Activity {
         setContentView(R.layout.main);
     }
 
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.activity_main, menu);
+        return super.onCreateOptionsMenu(menu);
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        if(item.getItemId() == R.id.moreApps){
+            Intent intent = new Intent(this, MoreAppsActivity.class);
+            startActivity(intent);
+            return true;
+        }
+        return super.onOptionsItemSelected(item);
+    }
 }
 
