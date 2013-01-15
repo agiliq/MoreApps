@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="hello">Hello Sample of MoreAppsLib!</string>
+    <string name="intro">Open the options menu to get to the MoreAppsActivity.
+	</string>
     <string name="app_name">Sample of MoreAppsLib</string>
 </resources>
