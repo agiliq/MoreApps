@@ -1,7 +1,11 @@
 package com.agiliq.android.moreappslib;
 
 import android.app.Activity;
+import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.AdapterView;
 import android.widget.GridView;
 
 public class MoreAppsActivity extends Activity {
@@ -38,5 +42,17 @@ public class MoreAppsActivity extends Activity {
 
         GridView gridView = (GridView) findViewById(R.id.mal_gridView);
         gridView.setAdapter(adapter);
+
+        gridView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long l) {
+                String packageName = getString(getResources().
+                        getIdentifier("mal_agiliq_apps_package_a" + position,
+                                "string", getPackageName()));
+                Intent intent = new Intent(Intent.ACTION_VIEW);
+                intent.setData(Uri.parse("market://details?id=" + packageName));
+                startActivity(intent);
+            }
+        });
     }
 }
