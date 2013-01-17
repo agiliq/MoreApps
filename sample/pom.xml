@@ -5,7 +5,7 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>com.agiliq.android.moreappslib.sample</groupId>
 	<artifactId>Sample</artifactId>
-	<version>1.0-SNAPSHOT</version>
+	<version>1.0</version>
 	<packaging>apk</packaging>
 	<name>Sample</name>
 
@@ -25,7 +25,7 @@
 		<dependency>
 			<groupId>com.agiliq.android.moreappslib</groupId>
 			<artifactId>MoreAppsLib</artifactId>
-			<version>1.0-SNAPSHOT</version>
+			<version>1.0</version>
 			<type>apklib</type>
 		</dependency>
 	</dependencies>
