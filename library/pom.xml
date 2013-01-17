@@ -5,14 +5,14 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>com.agiliq.android.moreappslib</groupId>
 	<artifactId>MoreAppsLib</artifactId>
-	<version>1.0</version>
+	<version>1.1-SNAPSHOT</version>
 	<packaging>apklib</packaging>
 	<name>MoreAppsLib</name>
 
 	<properties>
 		<platform.version>4.0.1.2
 		</platform.version>
-		<versionCode>1</versionCode>
+		<versionCode>2</versionCode>
 	</properties>
 
 	<dependencies>
