@@ -3,7 +3,7 @@ MoreAppsLib
 *This is an Android Library Project*
 How to use it
 -------------
-Add this MoreAppsLibrary project(**library**) as a dependency in the Android Application project you are implementing.  
+Add this MoreAppsLibrary project(<b>library</b>) as a dependency in the Android Application project you are implementing.  
 Add the following code in your `AndroidManifest.xml`:
 
     <activity android:name="com.agiliq.android.moreappslib.MoreAppsActivity"
