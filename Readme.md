@@ -1,5 +1,7 @@
 MoreAppsLib
 ===========
+If you have a portfolio of apps, you probably want to cross promote them.  
+
 *This is an Android Library Project*
 How to use it
 -------------
