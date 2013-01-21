@@ -2,7 +2,7 @@ MoreAppsLib
 ===========
 If you have a portfolio of apps, you probably want to cross promote them.  
 
-*This is an Android Library Project to make thsi easy.* [Details at](http://agiliq.com/blog/2013/01/moreapps-android-library-project-open-sourced/).
+*This is an Android Library Project to make this easy.* [Details here](http://agiliq.com/blog/2013/01/moreapps-android-library-project-open-sourced/).
 How to use it
 -------------
 Add this MoreAppsLibrary project(<b>library</b>) as a dependency in the Android Application project you are implementing.  
